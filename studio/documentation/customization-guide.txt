@@ -1,0 +1,94 @@
+# Aura Photography — Customization Guide
+
+## Branding
+
+### Site Name & Logo
+- Navbar brand text: search for "Aura Photography" across HTML files
+- Replace with your studio name in all 12 pages
+
+### Colors (CSS Variables)
+Edit `assets/css/style.css` — `:root` block:
+```css
+--color-primary: #B8975A;   /* Gold accent */
+--color-bg: #FAF9F6;        /* Page background */
+--color-text: #1C1C1C;      /* Body text */
+--color-section: #EEEEEE;   /* Alternate sections */
+--color-card-bg: #FFFFFF;   /* Card backgrounds */
+```
+
+Dark mode overrides are in `assets/css/dark-mode.css`.
+
+### Fonts
+Currently: Cormorant Garamond (headings) + Raleway (body).
+To change fonts:
+1. Update Google Fonts link in each HTML `<head>`.
+2. Update `--font-heading` and `--font-body` in `style.css`.
+
+## Content Pages
+
+| Page | What to customize |
+|------|-------------------|
+| index.html | Hero text, services, testimonials, awards, JSON-LD |
+| about.html | Studio story, team members, gear list |
+| portfolio.html | Gallery images and filter categories |
+| portfolio-details.html | Project details and image grid |
+| services.html | 6 service cards with prices |
+| service-details.html | Package details, FAQ, gallery strip |
+| pricing.html | Pricing tables and add-ons |
+| blog.html | 6 blog articles |
+| blog-details.html | Full article content |
+| contact.html | Form action, address, phone, map |
+| coming-soon.html | Countdown target date in main.js |
+| 404.html | Error message text |
+
+## Dark Mode
+- Toggle button: `#themeToggle` in navbar
+- Theme stored in localStorage key: `aura-theme`
+- Customize dark colors in `dark-mode.css`
+
+## RTL Support
+- Toggle button: `#rtlToggle` in navbar
+- Layout overrides in `assets/css/rtl.css`
+- Sets `dir="rtl"` and `lang="ar"` on `<html>`
+
+## Hover Animations
+All transitions use `transition: all 0.3s ease`.
+Key classes:
+- `.card-aura` — lift + shadow on hover
+- `.btn-aura` — color shift + scale 1.02
+- `.nav-link::after` — underline slide-in
+- `.portfolio-item img` — scale 1.05 zoom
+
+## Form Validation
+Booking form validation is in `assets/js/main.js`.
+Fields validated on `pages/contact.html`:
+- Name, email, phone (format), shoot type, date, location, people, message
+
+## SEO
+Each page has unique `<title>` and `<meta description>`.
+Update these when customizing content.
+Also update:
+- `sitemap.xml` — your domain URLs
+- `robots.txt` — sitemap URL
+- JSON-LD in `pages/index.html`
+
+## Countdown Timer
+In `assets/js/main.js`, find:
+```javascript
+const targetDate = new Date('2026-09-01T00:00:00').getTime();
+```
+Change the date for your coming-soon page launch.
+
+## Adding New Portfolio Images
+1. Add WebP file to `assets/images/`
+2. Copy a `.masonry-item` block in `portfolio.html`
+3. Set `data-category` for filter tabs
+4. Add `data-lightbox="portfolio"` on the anchor link
+
+## Responsive Breakpoints
+- Mobile: < 640px
+- Tablet: 640px – 1024px
+- Desktop: 1024px – 1280px
+- Large: > 1280px
+
+Defined in `style.css` media queries at the bottom of the file.
