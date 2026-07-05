@@ -763,3 +763,35 @@ body{
     overflow: hidden;
   }
 }
+
+/* ===== Booking Details Modal Text ===== */
+
+/* Light Theme */
+.modal-content,
+.modal-content label,
+.modal-content strong,
+.modal-content span,
+.modal-content p,
+.modal-content td,
+.modal-content h2,
+.modal-content h3 {
+    color: #222 !important;
+}
+
+/* Dark Theme */
+body.dark .modal-content,
+body.dark .modal-content label,
+body.dark .modal-content strong,
+body.dark .modal-content span,
+body.dark .modal-content p,
+body.dark .modal-content td,
+body.dark .modal-content h2,
+body.dark .modal-content h3 {
+    color: #f5f5f5 !important;
+}
+
+/* Close icon */
+.modal-content .btn-close,
+.modal-content .close {
+    color: inherit;
+}
