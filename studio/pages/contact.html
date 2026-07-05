@@ -197,17 +197,26 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/main.js"></script>
   <script>
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
+document.getElementById("bookingForm").addEventListener("submit", function (e) {
+
     e.preventDefault();
 
+    // Check if all required fields are valid
+    if (!this.checkValidity()) {
+        this.reportValidity();   // Show browser validation messages
+        return;                  // Stop here, don't show success popup
+    }
+
+    // Show success popup only if the form is valid
     Swal.fire({
-        icon: 'success',
-        title: 'Enquiry Sent!',
-        text: 'Thank you! We will contact you soon.',
-        confirmButtonColor: '#d4af37'
+        icon: "success",
+        title: "Enquiry Sent!",
+        text: "Thank you! We will contact you soon.",
+        confirmButtonColor: "#d4af37"
     });
 
     this.reset();
+
 });
 </script>
 

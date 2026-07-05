@@ -2050,4 +2050,40 @@ img {
     margin: 0 auto;
   }
 }
+/* ===========================
+   FAQ Theme Fix
+=========================== */
 
+/* Light Theme */
+.faq-answer,
+.faq-content,
+.accordion-body{
+    background:#ffffff !important;
+    color:#333 !important;
+}
+
+.faq-answer p,
+.faq-content p,
+.accordion-body p{
+    color:#555 !important;
+}
+
+/* Dark Theme */
+body.dark-theme .faq-answer,
+body.dark-theme .faq-content,
+body.dark-theme .accordion-body{
+    background:#1b1b1f !important;
+    color:#f5f5f5 !important;
+}
+
+body.dark-theme .faq-answer p,
+body.dark-theme .faq-content p,
+body.dark-theme .accordion-body p{
+    color:#f5f5f5 !important;
+}
+
+/* Icons */
+.faq-toggle,
+.accordion-icon{
+    color:#d4af37;
+}
