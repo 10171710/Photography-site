@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Aura Photography — Dark Mode Overrides
+   Applied via [data-theme="dark"] on <html>
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --color-bg: #0B0B0D;
+  --color-text: #F5F2EA;
+  --color-section: #121215;
+  --color-card-bg: #18181D;
+  --color-footer-bg: #0A0A0B;
+  --color-footer-text: #F5F2EA;
+  --color-border: rgba(245, 242, 234, 0.12);
+  --color-muted: #B0A89D;
+  --shadow-card: 0 12px 34px rgba(0, 0, 0, 0.45);
+  --shadow-card-hover: 0 22px 52px rgba(0, 0, 0, 0.58);
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--color-muted) !important;
+}
+
+[data-theme="dark"] .navbar-aura.navbar-scrolled,
+[data-theme="dark"] .navbar-aura.navbar-inner:not(.navbar-transparent) {
+  background: rgba(10, 10, 12, 0.96);
+  backdrop-filter: blur(18px) saturate(1.35);
+}
+
+[data-theme="dark"] .navbar-aura.navbar-hero.navbar-transparent:not(.navbar-scrolled) {
+  background: rgba(10, 10, 12, 0.96);
+  backdrop-filter: blur(18px) saturate(1.35);
+  box-shadow: none;
+}
+
+[data-theme="dark"] .navbar-aura .navbar-collapse {
+  background: rgba(12, 12, 14, 0.98);
+  border-color: rgba(212, 175, 55, 0.14);
+}
+
+[data-theme="dark"] .page-header {
+  background:
+    linear-gradient(135deg, rgba(18, 18, 21, 0.94), rgba(11, 11, 13, 0.92)),
+    #121215;
+}
+
+[data-theme="dark"] .portfolio-page-header {
+  background:
+    linear-gradient(90deg, rgba(11, 11, 13, 0.95), rgba(11, 11, 13, 0.78)),
+    url("https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&w=1920&h=720&fit=crop") center 44% / cover no-repeat;
+}
+
+[data-theme="dark"] .accordion-aura .accordion-button:not(.collapsed) {
+  background: #121215;
+}
+
+[data-theme="dark"] .form-aura .form-control,
+[data-theme="dark"] .form-aura .form-select,
+[data-theme="dark"] .auth-card .form-control,
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background: #121215;
+  border-color: rgba(245, 242, 234, 0.15);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .form-control::placeholder,
+[data-theme="dark"] .form-select::placeholder {
+  color: rgba(245, 242, 234, 0.6);
+}
+
+[data-theme="dark"] .form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23F5F2EA' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+[data-theme="dark"] .form-control:-webkit-autofill,
+[data-theme="dark"] .form-control:-webkit-autofill::first-line {
+  color: var(--color-text);
+  background-color: #121215 !important;
+}
+
+[data-theme="dark"] .newsletter-form .form-control {
+  background: #121215;
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .filter-btn {
+  background: #18181D;
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .article-content blockquote {
+  background: #121215;
+}
+
+[data-theme="dark"] .author-bio {
+  background: #121215;
+}
+
+[data-theme="dark"] .contact-info-item i {
+  background: #121215;
+}
+
+[data-theme="dark"] .map-placeholder {
+  background: #121215;
+}
+
+/* --- Modern Login Button Dark Mode --- */
+[data-theme="dark"] .btn-login-modern {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+}
+
+[data-theme="dark"] .btn-login-modern:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .navbar-aura.navbar-inner .navbar-toggler-icon,
+[data-theme="dark"] .navbar-aura.navbar-scrolled .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .card-aura-img-empty {
+  background: linear-gradient(135deg, #121215 0%, #241C10 100%);
+}
+
+[data-theme="dark"] .portfolio-empty-card {
+  background:
+    linear-gradient(135deg, rgba(18, 18, 21, 0.9), rgba(36, 28, 16, 0.88)),
+    linear-gradient(135deg, #121215 0%, #241C10 100%);
+}
+
+/* ==========================================================================
+   Aura Photography — Light Mode Overrides
+   Applied via [data-theme="light"] on <html>
+   ========================================================================== */
+
+/* --- Modern Login Button Light Mode --- */
+[data-theme="light"] .btn-login-modern {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+}
+
+[data-theme="light"] .btn-login-modern:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}

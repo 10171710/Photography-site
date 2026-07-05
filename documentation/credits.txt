@@ -1,0 +1,58 @@
+# Aura Photography — Credits & Attributions
+
+## Template
+- **Name:** Aura Photography Website Template
+- **Version:** 1.0
+- **Author:** Built for portrait & event photography studios
+- **License:** Customize freely for client projects
+
+## Frameworks & Libraries
+
+### Bootstrap 5.3.3
+- URL: https://getbootstrap.com
+- License: MIT
+- Used for: Grid, navbar, accordion, forms, responsive utilities
+
+### Google Fonts
+- **Cormorant Garamond** — headings (SIL Open Font License)
+- **Raleway** — body text (SIL Open Font License)
+- URL: https://fonts.google.com
+
+### Font Awesome 6.5.1
+- URL: https://fontawesome.com
+- License: Font Awesome Free License
+- Used for: Icons throughout the site
+
+### Lightbox2 2.11.4
+- URL: https://lokeshdhakar.com/projects/lightbox2/
+- Author: Lokesh Dhakar
+- License: MIT
+- Location: `assets/js/plugins/lightbox.min.js` and `lightbox.min.css`
+- Used for: Portfolio and gallery lightbox on image click
+
+## Demo Images
+Photography demo images sourced from Pexels (https://pexels.com).
+Pexels License: Free for commercial and non-commercial use.
+Replace with your own images before going live.
+
+## JavaScript
+- Custom scripts: `assets/js/main.js` (dark mode, validation, filters, countdown)
+- No jQuery required (Lightbox2 standalone version used)
+
+## Icons Used
+- Font Awesome: camera, users, baby, briefcase, glass-cheers, star, award,
+  trophy, medal, calendar, envelope, phone, map-marker, social media icons
+
+## Third-Party Integration Placeholders
+- **Formspree** — https://formspree.io (form handling)
+- **Mailchimp** — https://mailchimp.com (newsletter)
+- **Google Maps** — https://maps.google.com (location embed)
+
+## Accessibility
+Built with WCAG 2.1 AA considerations:
+- Skip links, ARIA labels, focus states, semantic HTML5, form labels
+
+## Special Thanks
+- Lightbox2 by Lokesh Dhakar for the elegant gallery experience
+- Bootstrap team for the responsive framework
+- Unsplash community for demo photography

@@ -1,0 +1,3 @@
+# Place your WebP images in this folder.
+# Demo pages currently use Unsplash CDN URLs.
+# Replace src attributes in HTML files when using local images.
