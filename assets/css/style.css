@@ -2050,4 +2050,66 @@ img {
     margin: 0 auto;
   }
 }
+/* ===== Booking View Modal ===== */
+
+.booking-modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+}
+
+.booking-card{
+    background:#fff;
+    width:100%;
+    max-width:450px;
+    border-radius:12px;
+    padding:25px;
+    position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.booking-card h2{
+    margin-bottom:20px;
+}
+
+.booking-card p{
+    margin:12px 0;
+    padding-bottom:8px;
+    border-bottom:1px solid #ddd;
+}
+
+.close-btn{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:28px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Mobile Responsive */
+
+@media (max-width:768px){
+
+    .booking-card{
+        width:95%;
+        padding:18px;
+    }
+
+    .booking-card h2{
+        font-size:22px;
+    }
+
+    .booking-card p{
+        font-size:15px;
+    }
+}
 

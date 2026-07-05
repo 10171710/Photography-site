@@ -993,7 +993,7 @@
     const container = document.getElementById('usersTableBody');
     if (!container) return;
     container.innerHTML = items.map(function (item) {
-      return '<tr><td>' + item.name + '</td><td>' + item.email + '</td><td>' + item.role + '</td><td><button class="btn btn-sm btn-outline-warning me-1" data-action="edit-user" data-id="' + item.id + '"><i class="fa-solid fa-pen"></i></button><button class="btn btn-sm btn-outline-danger" data-action="delete-user" data-id="' + item.id + '"><i class="fa-solid fa-trash"></i></button></td></tr>';
+      return '<tr><td data-label="Name">' + item.name + '</td><td data-label="Email">' + item.email + '</td><td data-label="Role"><span class="badge-soft">' + item.role + '</span></td><td data-label="Actions" class="text-center"><button class="btn btn-sm btn-outline-warning me-1" data-action="edit-user" data-id="' + item.id + '"><i class="fa-solid fa-pen"></i></button><button class="btn btn-sm btn-outline-danger" data-action="delete-user" data-id="' + item.id + '"><i class="fa-solid fa-trash"></i></button></td></tr>';
     }).join('');
   }
 

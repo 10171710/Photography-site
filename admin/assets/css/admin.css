@@ -725,15 +725,6 @@ body{
     flex-wrap:wrap;
 }
 
-.table-responsive{
-    width:100%;
-    overflow-x:auto;
-}
-
-.table{
-    min-width:700px;
-}
-
 }
 
 /* Small mobile */
@@ -763,3 +754,138 @@ body{
     overflow: hidden;
   }
 }
+/* ==========================
+   Users Page Mobile
+========================== */
+
+@media (max-width:768px){
+
+.message-summary-card{
+    padding:20px;
+}
+
+.message-summary-card .info-title{
+    font-size:14px;
+}
+
+.message-summary-card .info-value{
+    font-size:18px;
+    margin-bottom:12px;
+}
+
+.message-summary-card .row > div{
+    margin-bottom:12px;
+}
+
+.message-summary-card .row > div:last-child{
+    margin-bottom:0;
+}
+
+.admin-card{
+    padding:15px;
+    width:100%;
+}
+
+.admin-panel-grid{
+    display:block;
+}
+
+}
+
+/* Users table -> stacked cards on mobile, instead of a cramped
+   horizontally-scrolling table. Scoped to .users-table only so it
+   doesn't affect the tables on other admin pages. */
+/* Users Mobile Cards */
+@media (max-width:768px){
+
+.users-table thead{
+    display:none;
+}
+
+.users-table,
+.users-table tbody,
+.users-table tr,
+.users-table td{
+    display:block;
+    width:100%;
+}
+
+.users-table tr{
+    background:#fff;
+    border-radius:16px;
+    padding:18px;
+    margin-bottom:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.users-table td{
+    display:block;
+    padding:10px 0;
+    border:none;
+    text-align:left;
+}
+
+.users-table td::before{
+    content:attr(data-label);
+    display:block;
+    font-size:11px;
+    font-weight:700;
+    color:#777;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:4px;
+}
+
+.users-table td:last-child{
+    display:flex;
+    gap:10px;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.users-table td:nth-child(2){
+    word-break:break-word;
+    overflow-wrap:anywhere;
+}
+
+.users-table .btn,
+.users-table button{
+    margin-right:8px;
+}
+
+}
+/* =====================================
+   Users Mobile Table
+===================================== */
+
+@media (max-width:768px){
+
+.table-responsive{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+.users-table{
+    min-width:650px;
+}
+
+.users-table th,
+.users-table td{
+    white-space:nowrap;
+    font-size:13px;
+    padding:12px;
+    vertical-align:middle;
+}
+
+.users-table td:nth-child(2){
+    min-width:220px;
+}
+
+.users-table td:last-child{
+    text-align:center;
+    min-width:100px;
+}
+
+}
+
+
