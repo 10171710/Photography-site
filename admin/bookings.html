@@ -80,6 +80,31 @@
       </div>
     </div>
   </div>
+  <div class="modal fade" id="viewBookingModal" tabindex="-1" aria-labelledby="viewBookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="viewBookingModalLabel">Booking Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <dl class="row mb-0">
+            <dt class="col-5">Client</dt><dd class="col-7" id="viewBookingCustomer"></dd>
+            <dt class="col-5">Email</dt><dd class="col-7" id="viewBookingEmail"></dd>
+            <dt class="col-5">Service</dt><dd class="col-7" id="viewBookingService"></dd>
+            <dt class="col-5">Date</dt><dd class="col-7" id="viewBookingDate"></dd>
+            <dt class="col-5">Status</dt><dd class="col-7" id="viewBookingStatus"></dd>
+            <dt class="col-5">Amount</dt><dd class="col-7" id="viewBookingAmount"></dd>
+            <dt class="col-5">Note</dt><dd class="col-7" id="viewBookingNote"></dd>
+          </dl>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-aura" id="viewBookingEditBtn">Edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/admin.js"></script>
 </body>

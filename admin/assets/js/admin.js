@@ -601,7 +601,7 @@
         storeKey: STORAGE_KEYS.users,
         singular: 'User',
         successLabel: 'User',
-        buttonLabel: 'Add User',
+          
         fields: [
           { key: 'name', label: 'Name', type: 'text', required: true },
           { key: 'email', label: 'Email', type: 'email', required: true },
@@ -864,6 +864,33 @@
     }
   }
 
+  function openViewBookingModal(booking) {
+    const modal = document.getElementById('viewBookingModal');
+    if (!booking || !modal) return;
+
+    document.getElementById('viewBookingCustomer').textContent = booking.customer || '';
+    document.getElementById('viewBookingEmail').textContent = booking.email || '';
+    document.getElementById('viewBookingService').textContent = booking.service || '';
+    document.getElementById('viewBookingDate').textContent = booking.date || '';
+    document.getElementById('viewBookingStatus').innerHTML = '<span class="badge badge-soft badge-' + String(booking.status || '').toLowerCase() + '">' + (booking.status || '') + '</span>';
+    document.getElementById('viewBookingAmount').textContent = '$' + Number(booking.amount || 0).toLocaleString();
+    document.getElementById('viewBookingNote').textContent = booking.note || '—';
+
+    const editBtn = document.getElementById('viewBookingEditBtn');
+    if (editBtn) {
+      editBtn.onclick = function () {
+        if (window.bootstrap && window.bootstrap.Modal) {
+          window.bootstrap.Modal.getOrCreateInstance(modal).hide();
+        }
+        openBookingModal(booking);
+      };
+    }
+
+    if (window.bootstrap && window.bootstrap.Modal) {
+      window.bootstrap.Modal.getOrCreateInstance(modal).show();
+    }
+  }
+
   function saveBookingFromForm(event) {
     event.preventDefault();
 
@@ -993,7 +1020,7 @@
     const container = document.getElementById('usersTableBody');
     if (!container) return;
     container.innerHTML = items.map(function (item) {
-      return '<tr><td data-label="Name">' + item.name + '</td><td data-label="Email">' + item.email + '</td><td data-label="Role"><span class="badge-soft">' + item.role + '</span></td><td data-label="Actions" class="text-center"><button class="btn btn-sm btn-outline-warning me-1" data-action="edit-user" data-id="' + item.id + '"><i class="fa-solid fa-pen"></i></button><button class="btn btn-sm btn-outline-danger" data-action="delete-user" data-id="' + item.id + '"><i class="fa-solid fa-trash"></i></button></td></tr>';
+      return '<tr><td>' + item.name + '</td><td>' + item.email + '</td><td>' + item.role + '</td><td><button class="btn btn-sm btn-outline-warning me-1" data-action="edit-user" data-id="' + item.id + '"><i class="fa-solid fa-pen"></i></button><button class="btn btn-sm btn-outline-danger" data-action="delete-user" data-id="' + item.id + '"><i class="fa-solid fa-trash"></i></button></td></tr>';
     }).join('');
   }
 
@@ -1092,6 +1119,15 @@
       if (!button) return;
       const action = button.getAttribute('data-action');
       const id = Number(button.getAttribute('data-id'));
+
+      if (action === 'view-booking') {
+        const list = getItem(STORAGE_KEYS.bookings) || [];
+        const booking = list.find(function (item) { return item.id === id; });
+        if (booking) {
+          openViewBookingModal(booking);
+        }
+        return;
+      }
 
       if (action === 'edit-booking') {
         const list = getItem(STORAGE_KEYS.bookings) || [];
