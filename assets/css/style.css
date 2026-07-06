@@ -1456,6 +1456,7 @@ img {
 }
 
 .blog-card-img {
+  display: block;
   overflow: hidden;
   aspect-ratio: 16 / 10;
   background: var(--color-section);
