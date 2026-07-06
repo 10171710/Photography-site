@@ -108,6 +108,19 @@
     });
   });
 
+  /* --- Sidebar Category Links (Blog) --- */
+  document.querySelectorAll('[data-category-link]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      const filter = link.getAttribute('data-category-link');
+      const targetBtn = document.querySelector('.filter-btn[data-filter="' + filter + '"]');
+      if (targetBtn) {
+        targetBtn.click();
+        targetBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+
   /* --- Clickable Blog Cards --- */
   document.querySelectorAll('.blog-card[data-href]').forEach(function (card) {
     const targetHref = card.getAttribute('data-href');
