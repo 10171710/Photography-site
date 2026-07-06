@@ -601,7 +601,7 @@
         storeKey: STORAGE_KEYS.users,
         singular: 'User',
         successLabel: 'User',
-          
+        buttonLabel: 'Add User',
         fields: [
           { key: 'name', label: 'Name', type: 'text', required: true },
           { key: 'email', label: 'Email', type: 'email', required: true },
