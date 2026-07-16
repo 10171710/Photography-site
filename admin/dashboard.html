@@ -11,58 +11,9 @@
 </head>
 <body class="admin-body">
   <div class="admin-shell">
-    <aside class="admin-sidebar">
-      <div class="sidebar-brand">
-        <div class="brand-mark">A</div>
-        <div>
-          <div>AURA</div>
-          <small class="opacity-75">Admin Panel</small>
-        </div>
-      </div>
-      <div class="sidebar-label">Main</div>
-      <a class="sidebar-link active" href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
-      <a class="sidebar-link" href="bookings.html"><i class="fa-solid fa-calendar-check"></i> Bookings</a>
-      <a class="sidebar-link" href="customers.html"><i class="fa-solid fa-users"></i> Customers</a>
-      <a class="sidebar-link" href="portfolio.html"><i class="fa-solid fa-image"></i> Portfolio</a>
-      <a class="sidebar-link" href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a>
-      <a class="sidebar-link" href="services.html"><i class="fa-solid fa-camera"></i> Services</a>
-      <a class="sidebar-link" href="testimonials.html"><i class="fa-solid fa-star"></i> Testimonials</a>
-      <a class="sidebar-link" href="team.html"><i class="fa-solid fa-user-group"></i> Team</a>
-      <a class="sidebar-link" href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a>
-      <a class="sidebar-link" href="messages.html"><i class="fa-solid fa-envelope"></i> Messages</a>
-      <a class="sidebar-link" href="users.html"><i class="fa-solid fa-user-shield"></i> Users</a>
-      <a class="sidebar-link" href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
-      <a class="sidebar-link" href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
-      <div class="sidebar-footer">
-        <a class="sidebar-link" href="#" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-      </div>
-    </aside>
+    <aside class="admin-sidebar" id="adminSidebarRoot"></aside>
     <main class="admin-main">
-      <div class="admin-topbar">
-        <div class="d-flex align-items-center gap-2">
-          <button class="admin-sidebar-toggle" id="sidebarMenuToggle" type="button" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
-          <div>
-            <h2 class="mb-1">Dashboard Overview</h2>
-            <p class="text-muted mb-0">Monitor bookings, enquiries, and studio activity.</p>
-          </div>
-        </div>
-        <div class="admin-topbar-actions">
-          <label class="admin-toggle" for="rtlToggleSwitch">
-            <span>RTL</span>
-            <input class="admin-toggle-input" type="checkbox" id="rtlToggleSwitch" />
-            <span class="admin-toggle-slider"></span>
-          </label>
-          <label class="admin-toggle" for="themeToggleSwitch">
-            <span>Dark</span>
-            <input class="admin-toggle-input" type="checkbox" id="themeToggleSwitch" />
-            <span class="admin-toggle-slider"></span>
-          </label>
-          <div class="admin-profile-pill">
-            <img src="../assets/images/elena-vasquez.jpg" alt="Admin" class="rounded-circle" width="36" height="36" />
-            <div><div id="adminProfileName">Admin</div><small id="adminProfileRole">Administrator</small></div>
-          </div>
-        </div>
-      </div>
+      <div class="admin-topbar" id="adminTopbarRoot"></div>
       <div class="admin-content">
         <section class="stat-grid">
           <div class="stat-card"><span class="stat-label">Total Bookings</span><div class="stat-value" id="statBookings">0</div></div>
