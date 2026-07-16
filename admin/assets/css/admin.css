@@ -52,10 +52,8 @@ a:hover { color: var(--admin-primary-dark); }
   top: 0;
   height: 100vh;
   align-self: flex-start;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   box-shadow: inset -1px 0 0 rgba(255,255,255,0.06);
-  scrollbar-width: thin;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   z-index: 1030;
 }
@@ -104,6 +102,12 @@ a:hover { color: var(--admin-primary-dark); }
 .sidebar-nav {
   display: grid;
   gap: 0.25rem;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  padding-right: 0.15rem;
 }
 
 .sidebar-section {
@@ -143,9 +147,8 @@ a:hover { color: var(--admin-primary-dark); }
   margin-top: auto;
   padding: 0.75rem 0.25rem 0;
   border-top: 1px solid rgba(255,255,255,0.08);
-  position: sticky;
-  bottom: 0;
   background: linear-gradient(180deg, rgba(23, 20, 17, 0.08), rgba(23, 20, 17, 0.96));
+  flex-shrink: 0;
   z-index: 3;
 }
 
