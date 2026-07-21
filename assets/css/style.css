@@ -1120,10 +1120,19 @@ img {
     url("https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&w=1920&h=720&fit=crop") center 44% / cover no-repeat;
 }
 
-.portfolio-page-header .breadcrumb-aura .breadcrumb-item.active,
+.portfolio-page-header .breadcrumb-aura .breadcrumb-item.active {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.portfolio-page-header .breadcrumb-aura .breadcrumb-item a {
+  color: var(--color-text);
+  opacity: 0.7;
+}
+
 .portfolio-page-header h1,
 .portfolio-page-header .text-muted {
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
 }
 
 .page-header h1 {
