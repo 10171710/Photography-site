@@ -1,0 +1,19 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aura Photography">
+  <defs>
+    <linearGradient id="logoGold" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6E4A8"/>
+      <stop offset="0.55" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#A67C00"/>
+    </linearGradient>
+    <linearGradient id="logoRing" x1="18" y1="18" x2="46" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="64" height="64" rx="18" fill="#0B0B0D" stroke="url(#logoGold)" stroke-width="2"/>
+  <circle cx="36" cy="36" r="20" fill="url(#logoGold)" opacity="0.18"/>
+  <circle cx="36" cy="36" r="20" stroke="url(#logoGold)" stroke-width="1.5" fill="none"/>
+  <circle cx="36" cy="36" r="13" stroke="url(#logoRing)" stroke-width="1.2" fill="none"/>
+  <path d="M36 22V50M22 36H50M26.5 26.5L45.5 45.5M45.5 26.5L26.5 45.5" stroke="#D4AF37" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="36" cy="36" r="4.5" fill="#D4AF37"/>
+</svg>

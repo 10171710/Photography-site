@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aura Photography — Modern homepage layout. Elegant portrait and event photography studio for families, professionals, and celebrations.">
+  <title>Aura Photography | Home 2 (Modern Layout)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/dark-mode.css" rel="stylesheet">
+  <link href="../assets/css/rtl.css" rel="stylesheet">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-aura navbar-inner" id="mainNav" aria-label="Main navigation">
+    <div class="container navbar-shell">
+      <a class="navbar-brand" href="index.html">
+        <img src="../assets/images/aura-logo-nav.svg" alt="" class="navbar-logo navbar-logo-light" width="148" height="40" decoding="async" aria-hidden="true">
+        <img src="../assets/images/aura-logo-nav-dark.svg" alt="Aura Photography" class="navbar-logo navbar-logo-dark" width="148" height="40" decoding="async">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-collapse-main" id="navbarMain">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-auth nav-auth-links"></div>
+      </div>
+      <div class="navbar-utilities" aria-label="Site preferences">
+        <button class="nav-icon-btn" id="rtlToggle" aria-label="Switch to RTL layout" type="button"><i class="fas fa-right-left" aria-hidden="true"></i></button>
+        <button class="nav-icon-btn" id="themeToggle" aria-label="Switch to dark mode" type="button"><i class="fas fa-moon" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- Split Hero -->
+    <section class="hero-split" aria-label="Hero banner">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 hero-split-content order-2 order-lg-1">
+            <span class="subtitle">Modern Layout Preview</span>
+            <h1>Photography That Feels Like You</h1>
+            <p>A refined, editorial approach to portraits and events — the same studio and artistry as always, presented in a bold new way.</p>
+            <div class="hero-split-actions">
+              <a href="contact.html" class="btn-aura btn-aura-fill">Book Your Session</a>
+              <a href="portfolio.html" class="btn-aura btn-aura-outline">View Portfolio</a>
+            </div>
+            <p class="mt-4"><a href="index.html" class="layout-switch-link">&larr; View Classic Homepage</a></p>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="hero-split-media">
+              <img src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="Elegant wedding couple portrait" width="1200" height="1400" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stat Highlights -->
+    <section class="section-padding" aria-label="Studio highlights">
+      <div class="container">
+        <div class="stat-highlights">
+          <div>
+            <div class="stat-highlight-number">12+</div>
+            <div class="stat-highlight-label">Years Experience</div>
+          </div>
+          <div>
+            <div class="stat-highlight-number">500+</div>
+            <div class="stat-highlight-label">Happy Clients</div>
+          </div>
+          <div>
+            <div class="stat-highlight-number">6</div>
+            <div class="stat-highlight-label">Industry Awards</div>
+          </div>
+          <div>
+            <div class="stat-highlight-number">100%</div>
+            <div class="stat-highlight-label">Personalized Care</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services — Alternating Feature Rows -->
+    <section class="section-padding section-alt" aria-labelledby="services2-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="subtitle">What We Offer</span>
+          <h2 id="services2-heading">Our Services</h2>
+          <p>From intimate family portraits to grand celebrations, we craft imagery that reflects your unique story.</p>
+        </div>
+
+        <div class="row align-items-center g-5 mb-5">
+          <div class="col-lg-6">
+            <img src="../familypfoto.jpg" alt="Family portrait photography" class="rounded w-100" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <i class="fas fa-users service-icon" aria-hidden="true"></i>
+            <h3>Family</h3>
+            <p>Timeless family portraits that capture genuine connection and joy.</p>
+            <a href="service-family.html" class="btn-aura btn-aura-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+
+        <div class="row align-items-center g-5 mb-5 flex-lg-row-reverse">
+          <div class="col-lg-6">
+            <img src="https://images.pexels.com/photos/3875083/pexels-photo-3875083.jpeg?auto=compress&cs=tinysrgb&w=700&fit=crop" alt="Newborn photography session" class="rounded w-100" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <i class="fas fa-baby service-icon" aria-hidden="true"></i>
+            <h3>Newborn</h3>
+            <p>Gentle, safe sessions preserving the earliest days of life.</p>
+            <a href="service-newborn.html" class="btn-aura btn-aura-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+
+        <div class="row align-items-center g-5 mb-5">
+          <div class="col-lg-6">
+            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=700&fit=crop" alt="Corporate headshot photography" class="rounded w-100" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <i class="fas fa-briefcase service-icon" aria-hidden="true"></i>
+            <h3>Corporate</h3>
+            <p>Polished headshots and brand imagery for professionals.</p>
+            <a href="service-corporate.html" class="btn-aura btn-aura-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+
+        <div class="row align-items-center g-5 flex-lg-row-reverse">
+          <div class="col-lg-6">
+            <img src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=700&fit=crop" alt="Event photography at a wedding" class="rounded w-100" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <i class="fas fa-glass-cheers service-icon" aria-hidden="true"></i>
+            <h3>Events</h3>
+            <p>Weddings, galas, and milestones captured with artistry.</p>
+            <a href="service-events.html" class="btn-aura btn-aura-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="section-padding" aria-labelledby="portfolio2-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="subtitle">Our Work</span>
+          <h2 id="portfolio2-heading">Portfolio Highlights</h2>
+          <p>A glimpse into the moments we've been honoured to preserve.</p>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img src="../familypfoto.jpg" alt="Outdoor family portrait in golden hour light" width="600" height="600" loading="lazy">
+            <div class="portfolio-caption"><span>Golden Hour Family</span></div>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop" alt="Professional corporate headshot portrait" width="600" height="600" loading="lazy">
+            <div class="portfolio-caption"><span>Executive Portrait</span></div>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://images.pexels.com/photos/3875083/pexels-photo-3875083.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop" alt="Newborn baby wrapped in soft blankets" width="600" height="600" loading="lazy">
+            <div class="portfolio-caption"><span>Newborn Bliss</span></div>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop" alt="Live music event photography" width="600" height="600" loading="lazy">
+            <div class="portfolio-caption"><span>Live Event</span></div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="portfolio.html" class="btn-aura btn-aura-fill">View Full Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Spotlight -->
+    <section class="section-padding section-alt" aria-labelledby="testimonial2-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="subtitle">Client Love</span>
+          <h2 id="testimonial2-heading">In Their Words</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <blockquote class="testimonial-card text-center">
+              <div class="stars" aria-label="5 out of 5 stars">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </div>
+              <p>"Our wedding photos exceeded every expectation. Elena has an incredible eye for emotion and detail."</p>
+              <p class="testimonial-author">Priya &amp; David Chen</p>
+              <p class="testimonial-role">Wedding Photography</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner" aria-labelledby="cta2-heading">
+      <div class="container">
+        <h2 id="cta2-heading">Limited Slots Available — Book Today</h2>
+        <p>Our calendar fills quickly. Secure your preferred date and let us create something beautiful together.</p>
+        <a href="contact.html" class="btn-aura btn-aura-outline">Reserve Your Session</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-aura" aria-label="Site footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a href="index.html" class="footer-brand" aria-label="Aura Photography home">
+            <img src="../assets/images/aura-logo-nav.svg" alt="Aura Photography" class="navbar-logo footer-logo" width="148" height="40" decoding="async">
+          </a>
+          <p>Elegant portrait and event photography studio. Capturing life's most precious moments with artistry and care.</p>
+          <div class="footer-social mt-3">
+            <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on Pinterest"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Resources</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <p><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> Covai Tech Park Vishawasapuram 641035 </p>
+          <p><i class="fas fa-phone me-2" aria-hidden="true"></i> +1 (555) 012-3456</p>
+          <p><i class="fas fa-envelope me-2" aria-hidden="true"></i> hello@auraphotography.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aura Photography. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

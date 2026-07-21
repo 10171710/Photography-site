@@ -300,15 +300,6 @@
   /* --- Shared Authentication Flow --- */
   const AUTH_SESSION_KEY = 'aura-auth-session';
   const USERS_KEY = 'aura-registered-users';
-  const adminCreds = {
-    email: 'admin@auraphotography.com',
-    passwordHashes: [
-      'sha256$356345f3ff7b96b31e9b5f218575b77d8b89b68f3738bab1a69e5f66c61399e6',
-      'local$QXVyYUAxMjM='
-    ],
-    name: 'Admin',
-    role: 'admin'
-  };
 
   function normalizeEmail(email) {
     return String(email || '').trim().toLowerCase();
@@ -437,7 +428,6 @@
     }
 
     const displayName = session.name || 'User';
-    const dashboardHref = session.role === 'admin' ? '../admin/dashboard.html' : 'dashboard.html';
     const dropdown = document.createElement('div');
     dropdown.className = 'dropdown';
     dropdown.innerHTML = `
@@ -445,7 +435,6 @@
         <i class="fas fa-user-circle me-2" aria-hidden="true"></i><span class="auth-username">${displayName}</span>
       </button>
       <ul class="dropdown-menu dropdown-menu-end">
-        <li><a class="dropdown-item" href="${dashboardHref}">Dashboard</a></li>
         <li><button class="dropdown-item" id="logoutBtn">Logout</button></li>
       </ul>
     `;
@@ -464,42 +453,6 @@
   }
 
   ensureAuthButton();
-
-  function protectUserDashboard() {
-    if (currentPage !== 'dashboard.html') return;
-    const session = getCurrentSession();
-    if (!session) {
-      window.location.href = 'login.html';
-      return;
-    }
-    if (session.role === 'admin') {
-      window.location.href = '../admin/dashboard.html';
-      return;
-    }
-    const nameTargets = document.querySelectorAll('[data-auth-name]');
-    nameTargets.forEach(function (target) {
-      target.textContent = session.name || 'User';
-    });
-
-    const initialTargets = document.querySelectorAll('[data-auth-initial]');
-    initialTargets.forEach(function (target) {
-      target.textContent = (session.name || 'User').trim().charAt(0).toUpperCase() || 'U';
-    });
-
-    const emailTargets = document.querySelectorAll('[data-auth-email]');
-    emailTargets.forEach(function (target) {
-      target.textContent = session.email || 'you@example.com';
-    });
-
-    const registeredUser = getRegisteredUserByEmail(session.email);
-    const joinDate = formatJoinDate(session.createdAt || (registeredUser && registeredUser.createdAt));
-    const joinDateTargets = document.querySelectorAll('[data-auth-join-date]');
-    joinDateTargets.forEach(function (target) {
-      target.textContent = joinDate;
-    });
-  }
-
-  protectUserDashboard();
 
   const loginForm = document.getElementById('loginForm');
   if (loginForm) {
@@ -521,16 +474,6 @@
       }
 
       const normalizedEmail = normalizeEmail(email);
-      const isAdmin = (normalizedEmail === adminCreds.email && adminCreds.passwordHashes.indexOf(await createPasswordHash(password)) !== -1);
-      if (isAdmin) {
-        setAuthSession({ userId: 'admin', email: adminCreds.email, name: adminCreds.name, role: adminCreds.role });
-        showAuthMessage('Admin login successful. Redirecting to dashboard...', 'success');
-        window.setTimeout(function () {
-          window.location.href = '../admin/dashboard.html';
-        }, 600);
-        return;
-      }
-
       const users = getRegisteredUsers();
       const user = users.find(function (item) {
         return normalizeEmail(item.email) === normalizedEmail;
@@ -543,12 +486,20 @@
       }
 
       setAuthSession(buildUserSession(user));
-      showAuthMessage('Login successful. Redirecting to dashboard...', 'success');
+      showAuthMessage('Login successful. Redirecting...', 'success');
       window.setTimeout(function () {
-        window.location.href = 'dashboard.html';
+        window.location.href = 'index.html';
       }, 600);
     });
   }
+
+  document.querySelectorAll('[data-social-login]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const provider = btn.getAttribute('data-social-login') === 'apple' ? 'Apple' : 'Google';
+      const targetId = document.getElementById('registerMessage') ? 'registerMessage' : 'loginMessage';
+      showAuthMessage(provider + ' sign-in isn\'t connected in this demo yet.', 'info', targetId);
+    });
+  });
 
   const registerForm = document.getElementById('registerForm');
   if (registerForm) {
@@ -569,11 +520,6 @@
 
       if (!isValidEmail(email)) {
         showAuthMessage('Please enter a valid email address.', 'danger', 'registerMessage');
-        return;
-      }
-
-      if (normalizedEmail === adminCreds.email) {
-        showAuthMessage('Email already exists.', 'danger', 'registerMessage');
         return;
       }
 
