@@ -1746,8 +1746,17 @@ img {
 
 /* --- Blog Detail --- */
 .article-content img {
+  width: 100%;
+  height: auto;
+  display: block;
   border-radius: var(--radius-md);
   margin: var(--spacing-lg) 0;
+}
+
+.article-content .row img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin: 0;
 }
 
 .article-content blockquote {
