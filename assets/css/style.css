@@ -634,6 +634,8 @@ img {
   box-shadow: var(--shadow-card);
   transition: var(--transition-base);
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-aura:hover {
@@ -683,6 +685,9 @@ img {
 
 .card-aura-body {
   padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card-aura-body h3 {
@@ -693,6 +698,7 @@ img {
   color: var(--color-muted);
   margin-bottom: var(--spacing-md);
   font-size: 0.9375rem;
+  flex: 1;
 }
 
 .card-price {
