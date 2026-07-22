@@ -1270,6 +1270,11 @@ img {
   box-shadow: 0 0 0 2px var(--color-primary);
 }
 
+.accordion-aura .accordion-body {
+  background: var(--color-card-bg);
+  color: var(--color-muted);
+}
+
 /* --- Forms --- */
 .form-aura .form-label {
   font-weight: 500;
